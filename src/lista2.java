@@ -75,7 +75,7 @@ public class lista2 {
     // Leia hora inicial e a hora final de um jogo. A seguir calcule a
     // duração do Jogo, sabendo que O mesmo pode começar em um dia
     // e terminar em outro, tendo uma duração mínima de 1 hora e má-
-    // xima de 24 horas
+    // xima de 24 horas (refazer para que nenhum seja maior que 24)
     static void ex4(Scanner input) {
         System.out.print("digite a hora inicial ");
         int num = input.nextInt();
@@ -83,7 +83,7 @@ public class lista2 {
         System.out.print("digite a hora final ");
         int num2 = input.nextInt();
 
-        if (num >= 1 && num2 <= 24) {
+        if (num >= 1 && num <= 24 && num2 >= 1 && num2 <= 24) {
             System.out.printf("o jogo durou %s horas \n", num2 - num);
         } else {
             System.out.println("voce digitou a/as horas erradas");
@@ -93,7 +93,7 @@ public class lista2 {
 
     // Com base na tabela abaixo, escreva um programa que leia o có-
     // digo de um item e a quantidade deste item. A seguir, calcule e
-    // mostre o valor da conta a pagar:
+    // mostre o valor da conta a pagar: (refazer co if)
     // Código Descrição Preço
     // 1 Pizza 4
     // 2 Xburger 4,5
@@ -146,7 +146,8 @@ public class lista2 {
     // Leia 2 valores com uma casa decimal (x e y), que devem repre-
     // sentar as coordenadas de um ponto em um plano. A seguir, determine
     // qual o quadrante ao qual pertence o ponto, ou se se está sobre
-    // um dos eïxos cartesianos ou na origem (x= y=0).
+    // um dos eïxos cartesianos ou na origem (x= y=0). (faltou dizer se está no eixo
+    // X, no eixo Y ou origem)
     static void ex7(Scanner input) {
         System.out.print("digite o valor X: ");
         float x = input.nextFloat();
@@ -155,7 +156,13 @@ public class lista2 {
         float y = input.nextFloat();
 
         if (x == 0 || y == 0) {
-            System.out.print("esta no eixo");
+            if (x == 0 && y == 0) {
+                System.out.println("esta no eixo origem");
+            } else if (x != 0 || y == 0) {
+                System.out.println("esta no eixo y");
+            } else if (x == 0 && y != 0) {
+                System.out.println("esta no eixo x");
+            }
         } else if (x > 0 && y > 0) {
             System.out.println("1 quadrante");
         } else if (x < 0 && y > 0) {
@@ -189,7 +196,7 @@ public class lista2 {
         } else if (salario > 4664.68) {
             System.out.println("voce deve pagar 27,5% de aliquota, que é igual a " + salario * 0.275);
         } else {
-            System.out.println("salario baixo");
+            System.out.println("salario isento");
         }
 
     }
