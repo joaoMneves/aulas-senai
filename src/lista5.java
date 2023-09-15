@@ -115,7 +115,7 @@ public class lista5 {
                 System.out.printf("subtraçao = %s", num1 - num2);
                 break;
             case 'p':
-                System.out.printf("porcentagem = %s", (num1 * 100) / num2);
+                System.out.printf("porcentagem = %s", (num1 / 100) * num2);
                 break;
             case 'r':
                 System.out.printf("raiz num1 = %s, raiz num2 = %s", Math.sqrt(num1), Math.sqrt(num2));

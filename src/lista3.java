@@ -46,16 +46,17 @@ public class lista3 {
     // O algoritmo será encerrado quando pelo menos uma de duas coordenadas for NULA
     // (nesta situação sem escrever mensagem alguma).
     static void ex2(Scanner input) {
-        while (true) {
+        float x = 1.0f, y = 1.0f;
+        while (x != 0 & y != 0) {
             System.out.print("digite o valor X: ");
-            float x = input.nextFloat();
+            x = input.nextFloat();
 
             System.out.print("digite o valor Y: ");
-            float y = input.nextFloat();
+            y = input.nextFloat();
 
             if (x == 0 || y == 0) {
                 System.out.print("esta no eixo");
-                break;
+
             } else if (x > 0 && y > 0) {
                 System.out.println("1 quadrante");
             } else if (x < 0 && y > 0) {
