@@ -53,10 +53,8 @@ public class lista4 {
         int n = input.nextInt();
         int in = 0;
         int out = 0;
-        for (int i = 0; i <= n; i++) {
-            System.out.print("digite um valor: ");
-            int x = input.nextInt();
-            if (x >= 10 && x <= 20) {
+        for (int i = 0; i < n; i++) {
+            if (i >= 10 && i <= 20) {
                 in++;
             } else {
                 out++;
